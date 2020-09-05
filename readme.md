@@ -6,6 +6,7 @@
 
 [tutorial vide](https://www.youtube.com/watch?v=t_ispmWmdjY&t=10220s)
 
+[Common Array menthod] (https://www.freecodecamp.org/news/common-array-methods-in-ruby/)
 
 # Ruby names. 
 
