@@ -1,4 +1,5 @@
 # Block thì đc mô ta bằng do end hoặc {}
+# {} <=> do end
 
 3.times { |i| p i }
 3.times do |i|
@@ -38,3 +39,62 @@ def calculate2
 end
 
 calculate2
+
+# lambdas va Proc
+=begin
+lambdas với procs đều là  Proc
+=end
+a = Proc.new{ p ' hello process'}
+b = lambda { p ' hello lambdas'} 
+
+# đều thuộc proc
+p b.class
+p a.class
+
+# Kiểm tra param 
+pro = Proc.new do |x|
+  p x
+end
+
+lam = lambda do |x|
+  p x
+end
+
+# tthiếu thì mặc định là nil
+# 3 cách gọi 
+pro.call() 
+pro.()
+pro[]
+
+# thiếu thì báo lỗi
+lam.call(2)
+lam.call rescue ArgumentError 
+
+##====================
+p ' return ============================'
+=begin
+ 
+  Lambda: nếu return trong lambda, thì hàm vẫn chạy
+  Proc : nếu return trong proc. thì hàm ngoài dừng luôn
+ 
+=end
+p ' retủrn trong lambda '
+
+def method_lambda
+  lam = lambda { return puts "xin chao" }
+  lam.call
+  puts "cac ban"
+end
+
+method_lambda
+
+p ' return trung proc'
+
+def method_proc
+  prc = Proc.new { return puts "xin chao" }
+  prc.call
+  puts "cac ban"
+end
+
+
+method_proc

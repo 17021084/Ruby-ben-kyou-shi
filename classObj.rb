@@ -1,6 +1,6 @@
 class Student
   attr_accessor :name, :major, :gpa
-
+  @@customers = 0
   # constructor
   def initialize(name, major, gpa)
     @name = name

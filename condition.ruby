@@ -1,6 +1,9 @@
 is_tall = true
 is_male = true
 
+# nil se la false
+p 'nil mang ga tri false ' if !nil 
+
 if is_tall && is_male
   puts ' you tall and male'
 elsif !is_male && is_male

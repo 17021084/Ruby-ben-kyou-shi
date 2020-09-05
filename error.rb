@@ -16,3 +16,15 @@ rescue ZeroDivisionError => mathErr
 ensure
     puts 'ensure code block'
 end
+
+
+# 
+begin
+   p  1+1
+rescue => exception
+    p exception
+else
+    p 'ko co ngoại lệ nào xảy a thì mới chạy'
+ensure
+    p 'code nay luon chay'
+end
